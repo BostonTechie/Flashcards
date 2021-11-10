@@ -14,9 +14,9 @@
 
 
  <h3 class ='center'>Selected Deck Name</h3>
- <hr>
+ <hr style="height:3px;">
 
-    <table id='deckButton'>
+    <table id='deckScore'>
         <tbody>
             <tr>
                 <td id ='gotItScore'>Got it:</td>
@@ -41,23 +41,22 @@
     </table>
 
 
-    <table id='deckButton'>
-        <tbody>
-            <tr>
-                <td id ='gotItButton'>Got it</td>
-                <td id ='tryAgainButton'>Try Again</td>
-                <td id ='flipCard'>Flip Card</td>
-                <td id ='nextCard'>Next Card</td>
-                
-            </tr>
-        </tbody>
-    </table>
+    <div id='deckButton'>
+        <div class ='button' id ='gotItButton'>Got it</div>
+        <div  class ='button' id ='tryAgainButton'>Try Again</div>
+        <div  class ='button' id ='flipCard'>Flip Card</div>
+        <div  class ='button' id ='nextCard'>Next Card</div>
+    </div>
+    
+    <br><br>
 
     <div id='toggleButton' >
-        <div id ='addCard'>Add Card</div>
-        <div id ='reset'>Reset Score / Deck</div>      
+        <div class ='button' id ='addCard'>Add Card</div>
+        <div class ='button'  id ='reset'>Reset Score / Deck</div>      
     </div>
-    <hr>
+    
+    <br> <br> <br>
+    <hr style="height:3px;">
 
 
     <script src="cards.js"></script>

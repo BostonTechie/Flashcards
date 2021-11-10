@@ -5,50 +5,74 @@ body {
     margin-bottom: 0px;
 } 
 
-
 .center {
     text-align: center;
 }
 
 #deckButton{
-    width: 95%;
-    margin-top: 1%;
-    margin-left: auto;
-    margin-right: auto;
-    
-
+    display: grid;
+     grid-template-columns:  .5fr .5fr .5fr .5fr .5fr .5fr .5fr;
+     width: 80%;
+     margin: auto;
+     
 }
 
+#gotItButton{
+    grid-column: 1 / 1 span;
+}
+
+#tryAgainButton{
+    grid-column: 3 / 1 span;
+}
+
+#flipCard{
+    grid-column: 5 / 1 span;
+}
+
+#nextCard{
+    grid-column: 7 / 1 span;
+}
 
 #deckTable{
     width: 80%;
     margin-top: 8%;
     margin-left: auto;
     margin-right: auto;
-    
-
 }
- #deckCard, td{
+
+#deckCard, td{
     text-align: left;
     background-color: rgb(167, 167, 167);
     border: 3px solid rgb(22, 35, 216);
- }
+}
 
- #toggleButton{
+#toggleButton{
      display: grid;
-     grid-template-columns: 100px;
-     grid-template-columns:  1fr 2fr;
- }
+     grid-template-columns:  1fr .2fr 1fr .2fr;
+     margin-right: 50px;
+     float:right;
+     width: 80%;
+}
 
- hr{
-     height: 10px;
- }
+.button{
+    margin-right: ;
+    font-weight: 800;
+    font-size: x-large;
+    text-align: center;
+    background-color: rgb(61, 113, 197);
+    border: none;
+    border-radius: 20px;
+}
 
-    #addCard,#reset{
-        text-align: center;
-        background-color: rgb(61, 113, 197);
-        border: none;
-        border-radius: 20px;
-    }
+#reset{
+  grid-column: 3 / 1 span;
+}
 
-   
+#addCard{
+ grid-column: 1 / 1 span;
+}
+
+hr {
+  background-color: #333; 
+}
+    
