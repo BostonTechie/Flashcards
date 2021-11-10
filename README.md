@@ -4,7 +4,7 @@ First commit 11/8/2021
 
 Hello, my coding bootcamp is nearing the end of unit one, and it is time to build a project for grading purposes. 
 
- • List of the Technologies used: JavaScript , figma CSS , HTML , jquery , visual studio code editor
+ • List of the Technologies used: JavaScript , figma, CSS , HTML , jquery , visual studio code editor
 
 • An embedded screenshot of the app
 

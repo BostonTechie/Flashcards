@@ -6,6 +6,9 @@ let i = 0
 //boolean to toggle between front and back of card
 let cardToggle = true
 
+//track if the user got an answer correct or not so they can go over ones they missed
+let gotItTracking =[]
+
 
 class deck {
     constructor(nameDeck){
@@ -54,18 +57,27 @@ javaDeck.addCard(card3)
 javaDeck.addCard(card4)
 javaDeck.addCard(card5)
 
+
 // javaDeck.cards.forEach( (card)=> {addCard(card)})
 
 
-
-
-// let deckLength = javaDeck.cards.length
-
-
+// set initial text to your first card
 $('#flashCard').text(javaDeck.cards[0].frontCard)
 
 $('#flipCard').on('click',()=> javaDeck.flipCard())
 $('#nextCard').on('click',()=> javaDeck.nextCard())
+
+//https://www.youtube.com/watch?v=9NzKTSLceTc
+// https://keycode.info/
+//37 left arrow 39 right arrow
+
+$(document).on('keydown',(e)=> {
+    if(e.keyCode === 39) { javaDeck.nextCard()}
+})
+
+
+// push the length of the cards into a array for tracking if user got it right or not
+javaDeck.cards.forEach( card=> gotItTracking.push(false))
 
 
 // javaDeck.cards.forEach( card=> console.log('here is your front of card ',card.frontCard,'and here is your back of card ',card.backCard))
