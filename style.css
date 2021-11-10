@@ -6,15 +6,30 @@ body {
 } 
 
 
-
-.center {
-    text-align: center;
+#header{
+    display: grid;
+    grid-template-columns:  1fr .5fr 1fr .5fr 1fr;
+    width: 90%;
+    margin: auto;
 }
+
+#deckName{
+    grid-column: 3 / 1 span;
+    font-size: xx-large;
+}
+
+#deckSelect{
+    grid-column: 5 / 1 span;
+}
+
+
 
 #deckScore{
     display: grid;
     grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  1fr 1fr;
+    grid-template-rows:  1fr .5fr 1fr;
+    font-size: larger;
+    font-weight: 800;
 }
 
 #gotItScore{
@@ -31,10 +46,12 @@ body {
 
 #tryAgainScore{
     grid-column: 1 / 1 span;
+    grid-row: 3 / 1 span;
 }
 
 #backSelect{
     grid-column: 3 / 1 span;
+    grid-row: 3 / 1 span;
 }
 
 
