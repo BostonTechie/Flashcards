@@ -8,8 +8,10 @@ class deck {
     addCard (card){
         this.cards.push(card)
     }
-      
+
+ 
 }
+
 
 
 const javaDeck = new deck ('javascript')
@@ -21,7 +23,8 @@ javaDeck.addCard(card5)
 
 // javaDeck.cards.forEach( (card)=> {addCard(card)})
 
-
+let $flashCard =  $('#flashCard')
+$flashCard.text(javaDeck.cards[0].frontCard)
 console.log(javaDeck);
 
 javaDeck.cards.forEach( card=> console.log('here is your front of card ',card.frontCard,'and here is your back of card ',card.backCard))
