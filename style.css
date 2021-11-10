@@ -33,3 +33,22 @@ body {
     background-color: rgb(167, 167, 167);
     border: 3px solid rgb(22, 35, 216);
  }
+
+ #toggleButton{
+     display: grid;
+     grid-template-columns: 100px;
+     grid-template-columns:  1fr 2fr;
+ }
+
+ hr{
+     height: 10px;
+ }
+
+    #addCard,#reset{
+        text-align: center;
+        background-color: rgb(61, 113, 197);
+        border: none;
+        border-radius: 20px;
+    }
+
+   
