@@ -11,21 +11,20 @@ class deck {
   
     nextCard(javaDeck){
        
-
-        //why isn't this working?
-        if ((i-2) >= this.cards.length){
-            window.alert('Congrats you reached the end of the deck')
+        if ( (i+1) === this.cards.length){
+            window.alert('Congrats you reached the end of the deck!!')
+            $flashCard.text(this.cards[0].frontCard)
+            i = 0
         }
         
         else {
             i = ++i
-            $flashCard.text(this.cards[i].frontCard)
-            
+            $flashCard.text(this.cards[i].frontCard)          
         }
     }
 
     flipCard (javaDeck){
-         console.log(this.cards[0].frontCard)
+        $flashCard.text(this.cards[i].backCard)
     }
     
 }
@@ -42,6 +41,7 @@ javaDeck.addCard(card5)
 
 let $flashCard =  $('#flashCard')
 let i = 0
+// let deckLength = javaDeck.cards.length
 
 
 $flashCard.text(javaDeck.cards[0].frontCard)
