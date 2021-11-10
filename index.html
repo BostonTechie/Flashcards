@@ -6,9 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flashcards for Software Engineering</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+    <img id='logo' src="images/image 1.png" alt="Full Stack Accountant Logo">
+
+
+ <h3 class ='center'>Selected Deck Name</h3>
+ <hr>
+
+ <table id='deckButton'>
+    <tbody>
+        <tr>
+            <td id ='gotItScore'></td>
+            <td id ='frontSelect'></td>
+            <td id ='deckCount'></td>
+        </tr>
+        <tr>
+            <td id ='tryAgainScore'></td>
+            <td id ='backSelect'></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+    <table id='deckTable'>
+        <tbody>
+            <tr id='deckCard'><td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, sapiente sequi, similique fugiat veritatis accusamus exercitationem commodi repudiandae debitis ratione itaque dolor nulla quasi. Rerum vel nisi consequatur amet? Eveniet?</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <table id='deckButton'>
+        <tbody>
+            <tr>
+                <td id ='gotItButton'></td>
+                <td id ='frontSelect'></td>
+                <td id ='flipCard'></td>
+                <td id ='nextCard'></td>
+                
+            </tr>
+        </tbody>
+    </table>
+
+    <table id='deckButton' >
+        <tbody>
+            <tr>
+                <td id ='addCard'></td>
+                <td id ='reset'></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <script src="cards.js"></script>
     <script src="app.js"></script>
+   
 </body>
 </html>
