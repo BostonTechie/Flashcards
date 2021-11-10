@@ -1,3 +1,12 @@
+
+
+//index to allow for the next button to flip through all available cards
+let i = 0
+
+//boolean to toggle between front and back of card
+let cardToggle = true
+
+
 class deck {
     constructor(nameDeck){
         // why is my uppercase not working?
@@ -13,24 +22,32 @@ class deck {
        
         if ( (i+1) === this.cards.length){
             window.alert('Congrats you reached the end of the deck!!')
-            $flashCard.text(this.cards[0].frontCard)
+            $('#flashCard').text(this.cards[0].frontCard)
             i = 0
         }
         
         else {
             i = ++i
-            $flashCard.text(this.cards[i].frontCard)          
+            $('#flashCard').text(this.cards[i].frontCard)          
         }
     }
 
     flipCard (javaDeck){
-        $flashCard.text(this.cards[i].backCard)
+        if (cardToggle === true){
+            $('#flashCard').text(this.cards[i].backCard)
+            cardToggle = false
+        }
+        else if (cardToggle === false){
+            $('#flashCard').text(this.cards[i].frontCard)
+            cardToggle = true
+        }
     }
     
 }
 
-
 const javaDeck = new deck ('javascript')
+
+
 javaDeck.addCard(card1)
 javaDeck.addCard(card2)
 javaDeck.addCard(card3)
@@ -39,14 +56,13 @@ javaDeck.addCard(card5)
 
 // javaDeck.cards.forEach( (card)=> {addCard(card)})
 
-let $flashCard =  $('#flashCard')
-let i = 0
+
+
+
 // let deckLength = javaDeck.cards.length
 
 
-$flashCard.text(javaDeck.cards[0].frontCard)
-
-
+$('#flashCard').text(javaDeck.cards[0].frontCard)
 
 $('#flipCard').on('click',()=> javaDeck.flipCard())
 $('#nextCard').on('click',()=> javaDeck.nextCard())
