@@ -94,12 +94,12 @@ body {
     grid-column: 1 / 1 span;
 }
 
-#tryAgainButton{
-    grid-column: 3 / 1 span;
+#previousCard{
+    grid-column: 5 / 1 span;
 }
 
 #flipCard{
-    grid-column: 5 / 1 span;
+    grid-column: 3 / 1 span;
 }
 
 #nextCard{
