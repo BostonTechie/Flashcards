@@ -2,6 +2,7 @@
 
 //index to allow for the next button to flip through all available cards
 let i = 0
+let j = 1
 
 //index to allow for the next button to store all memorized cards
 let gotItCount = 0
@@ -14,9 +15,9 @@ let gotItTracking =[]
 
 
 class deck {
-    constructor(nameDeck){
+    constructor(deck){
         
-        this.nameDeck = nameDeck.charAt(0).toUpperCase() + nameDeck.slice(1)
+        this.deck = deck.charAt(0).toUpperCase() + deck.slice(1)
         this.cards = []
     }
     
@@ -24,21 +25,31 @@ class deck {
         this.cards.push(card)
     }
   
-    nextCard(javaDeck){
+    nextCard(){
+      if (this.cards[i].memorized === true){
+     // start here tomorrow     
+         console.log(`found a true ${j}`)
+       }
        
         if ( (i+1) === this.cards.length){
             window.alert('Congrats you reached the end of the deck, restart until you got them all memorized!!')
             $('#flashCard').text(this.cards[0].frontCard)
+            console.log(`here is i ${i}`);
+            console.log(`here is j ${j}`); 
             i = 0
+            j = 1
         }
         
         else {
             i = ++i
-            $('#flashCard').text(this.cards[i].frontCard)          
-        }
+            $('#flashCard').text(this.cards[i].frontCard)    
+            j = i+1    
+            console.log(`here is i ${i}`);
+            console.log(`here is j ${j}`); 
+        } 
     }
 
-    flipCard (javaDeck){
+    flipCard (){
         if (cardToggle === true){
             $('#flashCard').text(this.cards[i].backCard)
             cardToggle = false
@@ -49,7 +60,8 @@ class deck {
         }
     }
     
-    gotIt(javaDeck){
+    // function when user has memorized card and log it as such, this causes the "nextCard" function to ignore card on next 'go around'
+    gotIt(){
         
         if (this.cards[i].memorized === true){
             window.alert('You already memorized this card go to the next card')
@@ -97,7 +109,8 @@ for( const element of javaDeck.cards){
     element.memorized = false
 }
 
-
+console.log(`here is i ${i}`);
+console.log(`here is j ${j}`);
 
 // javaDeck.cards.forEach( card=> console.log('here is your front of card ',card.frontCard,'and here is your back of card ',card.backCard))
 
