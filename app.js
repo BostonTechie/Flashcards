@@ -28,7 +28,9 @@ class deck {
     nextCard(){
       if (this.cards[i].memorized === true){
      // start here tomorrow     
-         console.log(`found a true ${j}`)
+     // find index store it as a variable then display that
+     //console.log(this.cards.memorized.findIndex(memory => memory === false))
+     console.log(`found a true ${i}`)
        }
        
         if ( (i+1) === this.cards.length){
