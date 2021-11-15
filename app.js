@@ -69,9 +69,10 @@ class deck {
             window.alert('You already memorized this card go to the next card')
         }
         else {
-        gotItCount = ++gotItCount
-        this.cards[i].memorized = true
-        $('#gotItScore').text(`Got it memorized: ${gotItCount}`)
+            gotItCount = ++gotItCount
+            this.cards[i].memorized = true
+            $('#gotItScore').text(`Got it memorized: ${gotItCount}`)
+            this.cards.splice(i,1)
         }
     }
 }
@@ -82,8 +83,8 @@ const javaDeck = new deck ('javascript')
 javaDeck.addCard(card1)
 javaDeck.addCard(card2)
 javaDeck.addCard(card3)
-javaDeck.addCard(card4)
-javaDeck.addCard(card5)
+// javaDeck.addCard(card4)
+// javaDeck.addCard(card5)
 
 // set initial text to your first card
 $('#flashCard').text(javaDeck.cards[0].frontCard)
