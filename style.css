@@ -7,7 +7,8 @@ body {
 
 #front{
     text-align: center;
-    font-size: 300%;
+    font-size: 200%;
+    grid-column: 2 / 2 span;
     
 }
 
@@ -32,13 +33,15 @@ body {
 #deckScore{
     display: grid;
     grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows:  1fr .5fr 1fr;
+    grid-template-rows:  1fr;
     font-size: larger;
-    font-weight: 800;
+    font-weight: 500;
 }
+
 
 #gotItScore{
     grid-column: 1 / 1 span;
+    font-size: xx-large;
 }
 
 #frontSelect{
@@ -47,6 +50,7 @@ body {
 
 #deckCount{
     grid-column: 5 / 1 span;
+    font-size: xx-large;
 }
 
 #tryAgainScore{
@@ -86,6 +90,7 @@ body {
     background-color: rgb(61, 113, 197);
     border: none;
     border-radius: 20px;
+    cursor:pointer;
 }
 
 #deckButton{
