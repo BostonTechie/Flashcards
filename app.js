@@ -9,6 +9,7 @@ let gotItCount = 0
 
 //boolean to toggle between front and back of card
 let cardToggle = true
+let gotItToggle = false
 
 //track if the user got an answer correct or not so they can go over ones they missed
 let gotItTracking =[]
@@ -33,7 +34,7 @@ class deck {
      console.log(`found a true ${i}`)
        }
        
-        if ( (i+1) === this.cards.length){
+        if ( (i+1) === this.cards.length || i >= this.cards.length){
             window.alert('Congrats you reached the end of the deck, restart until you got them all memorized!!')
             $('#flashCard').text(this.cards[0].frontCard)
             console.log(`here is i ${i}`);
@@ -65,14 +66,15 @@ class deck {
     // function when user has memorized card and log it as such, this causes the "nextCard" function to ignore card on next 'go around'
     gotIt(){
         
-        if (this.cards[i].memorized === true){
-            window.alert('You already memorized this card go to the next card')
+        if (gotItToggle === true){
+            window.alert('You already memorized this card please click on the next card button')
         }
         else {
             gotItCount = ++gotItCount
             this.cards[i].memorized = true
             $('#gotItScore').text(`Got it memorized: ${gotItCount}`)
             this.cards.splice(i,1)
+            gotItToggle = true
         }
     }
 }
