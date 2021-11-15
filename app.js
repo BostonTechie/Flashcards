@@ -19,6 +19,7 @@ class deck {
         this.memorizedCard = []
     }
     
+  
     addCard (card){
         this.cards.push(card)
     }
@@ -50,14 +51,16 @@ class deck {
         if (cardToggle === true){
             $('#flashCard').text(this.cards[i].backCard)
             cardToggle = false
+            $('#front').text('Back of Card')
         }
         else if (cardToggle === false){
             $('#flashCard').text(this.cards[i].frontCard)
             cardToggle = true
+            $('#front').text('Front of Card')
         }
     }
     
-    // function when user has memorized card and log it as such, this causes the "nextCard" function to ignore card on next 'go around'
+    //  when user has memorized card the following function can log it as such, this causes the that card to be spliced from the array and added to a memorized array. Webpage is updated with tracking of how the user is progressing through the deck
     gotIt(){
         
         if (gotItToggle === true){
@@ -69,6 +72,7 @@ class deck {
             $('#gotItScore').text(`Got it memorized: ${gotItCount}`)
             this.memorizedCard.push(this.cards.splice(i,1))
             gotItToggle = true
+           $('#deckCount').text('Cards left to memorize: '+ this.cards.length)
         }
     }
 }
@@ -79,8 +83,12 @@ const javaDeck = new deck ('javascript')
 javaDeck.addCard(card1)
 javaDeck.addCard(card2)
 javaDeck.addCard(card3)
-// javaDeck.addCard(card4)
-// javaDeck.addCard(card5)
+javaDeck.addCard(card4)
+javaDeck.addCard(card5)
+
+// Display the initial deck length whatever it may be not dynamic at the moment
+$('#deckCount').text('Cards left to memorize: '+ javaDeck.cards.length)
+
 
 // set initial text to your first card
 $('#flashCard').text(javaDeck.cards[0].frontCard)

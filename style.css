@@ -5,6 +5,11 @@ body {
     margin-bottom: 0px;
 } 
 
+#front{
+    text-align: center;
+    font-size: 300%;
+    
+}
 
 #header{
     display: grid;
@@ -69,6 +74,7 @@ body {
 
 #flashCard{
     font-size: xx-large;
+    
 }
 
 
@@ -99,7 +105,7 @@ body {
 }
 
 #flipCard{
-    grid-column: 3 / 1 span;
+    grid-column: 3 / 3 span;
 }
 
 #nextCard{
