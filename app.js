@@ -1,9 +1,7 @@
+// Following flashcard made by Andrew Urquhart on 11/15/2021
 
-
-//index to allow for the next button to flip through all available cards
+//index tracking to allow for the next button to flip through all available cards
 let i = 0
-let j = 1
-const flipUndefined = window.undefined
 
 //index to allow for the next button to store all memorized cards
 let gotItCount = 0
@@ -12,15 +10,13 @@ let gotItCount = 0
 let cardToggle = true
 let gotItToggle = false
 
-//track if the user got an answer correct or not so they can go over ones they missed
-let gotItTracking =[]
-
 
 class deck {
     constructor(deck){
         
         this.deck = deck.charAt(0).toUpperCase() + deck.slice(1)
         this.cards = []
+        this.memorizedCard = []
     }
     
     addCard (card){
@@ -29,22 +25,24 @@ class deck {
   
     nextCard(){
      
-       
-      if ( (i+1) === this.cards.length || i >= this.cards.length){
-            window.alert('Congrats you reached the end of the deck, restart until you got them all memorized!!')
+        gotItToggle = false
+
+      if ( (i+1) === this.cards.length || i >= this.cards.length){  
             $('#flashCard').text(this.cards[0].frontCard)
-            console.log(`here is i ${i}`);
-            console.log(`here is j ${j}`); 
             i = 0
-            j = 1
+
+            if (1 >=  this.cards.length ){
+                window.alert('Congrats you reached the end of the deck, restart if you want to start all over again!!')
+
+                //diplay final card upon reaching the end of the deck
+                $('#flashCard').text(this.cards[0].frontCard)
+              
+            }
         }
         
         else {
-            i = ++i
-            $('#flashCard').text(this.cards[i].frontCard)    
-            j = i+1    
-            console.log(`here is i ${i}`);
-            console.log(`here is j ${j}`); 
+             ++i
+            $('#flashCard').text(this.cards[i].frontCard)      
         } 
     }
 
@@ -69,7 +67,7 @@ class deck {
             gotItCount = ++gotItCount
             this.cards[i].memorized = true
             $('#gotItScore').text(`Got it memorized: ${gotItCount}`)
-            this.cards.splice(i,1)
+            this.memorizedCard.push(this.cards.splice(i,1))
             gotItToggle = true
         }
     }
@@ -110,11 +108,8 @@ for( const element of javaDeck.cards){
     element.memorized = false
 }
 
-console.log(`here is i ${i}`);
-console.log(`here is j ${j}`);
+
 
 // javaDeck.cards.forEach( card=> console.log('here is your front of card ',card.frontCard,'and here is your back of card ',card.backCard))
 
 // javaDeck.cards.forEach( (card)=> {addCard(card)})
-
-// console.log(javaDeck)
