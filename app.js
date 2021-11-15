@@ -35,7 +35,7 @@ class deck {
             if (1 >=  this.cards.length ){
                 window.alert('Congrats you reached the end of the deck, restart if you want to start all over again!!')
 
-                //diplay final card upon reaching the end of the deck
+                //display final card upon reaching the end of the deck
                 $('#flashCard').text(this.cards[0].frontCard)
               
             }
@@ -75,6 +75,12 @@ class deck {
            $('#deckCount').text('Cards left to memorize: '+ this.cards.length)
         }
     }
+
+    //function to reload the page thus resetting the deck and all the memorized cards
+    reset(){
+        location.reload()
+        console.log('hello');
+    }
 }
 
 const javaDeck = new deck ('javascript')
@@ -110,6 +116,9 @@ $('#flipCard').on('click',()=> javaDeck.flipCard())
 // call function when user had memorized card and want to remove it from deck
 $('#gotItButton').on('click',()=> javaDeck.gotIt())
 
+
+//https://www.w3schools.com/jsref/met_loc_reload.asp
+$('#reset').on('click',()=> javaDeck.reset())
 
 // push the length of the cards into a array for tracking if user got it right or not
 for( const element of javaDeck.cards){
