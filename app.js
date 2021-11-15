@@ -3,6 +3,7 @@
 //index to allow for the next button to flip through all available cards
 let i = 0
 let j = 1
+const flipUndefined = window.undefined
 
 //index to allow for the next button to store all memorized cards
 let gotItCount = 0
@@ -27,14 +28,9 @@ class deck {
     }
   
     nextCard(){
-      if (this.cards[i].memorized === true){
-     // start here tomorrow     
-     // find index store it as a variable then display that
-     //console.log(this.cards.memorized.findIndex(memory => memory === false))
-     console.log(`found a true ${i}`)
-       }
+     
        
-        if ( (i+1) === this.cards.length || i >= this.cards.length){
+      if ( (i+1) === this.cards.length || i >= this.cards.length){
             window.alert('Congrats you reached the end of the deck, restart until you got them all memorized!!')
             $('#flashCard').text(this.cards[0].frontCard)
             console.log(`here is i ${i}`);
