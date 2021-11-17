@@ -17,10 +17,10 @@ Hello, my coding bootcamp is nearing the end of unit one, and it is time to buil
     MVP Goals (minimal viable product)
         As a player, I want to be on a website that has a series of questions about a subject.
         As a player, I would like to see the question and be able to control when I see the answer
-        As a player, I would like to click a button that logs when I know an answer that card gets removed from the deck, versus when I reshuffle the card into the deck so that I can memorize it more.
-        As a player I would like the app to score how many cards I know, are working on, and are left in the deck
+        As a player, I would like to click a button that logs when I know an answer, and have that card gets removed from the deck, versus when I reshuffle the card into the deck so that I can memorize it more.
+        As a player I would like the app to score how many cards I know, and are left in the deck to be memorized
         As a player, I would like to be able to restart the flashcards fresh
-        As a player I would like to flip through just the front, or just the back of a deck
+    
 
 
 
