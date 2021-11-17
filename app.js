@@ -50,13 +50,16 @@ class deck {
     flipCard (){
         if (cardToggle === true){
             $('#flashCard').text(this.cards[i].backCard)
+            $('#flashCard').css("background-color",'lightgreen')
             cardToggle = false
+
             $('#front').text('Back of Card')
         }
         else if (cardToggle === false){
             $('#flashCard').text(this.cards[i].frontCard)
             cardToggle = true
             $('#front').text('Front of Card')
+            $('#flashCard').css("background-color",'rgb(167, 167, 167)')
         }
     }
     
