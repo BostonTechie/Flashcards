@@ -178,7 +178,7 @@
     }
 
     #logo{
-        width: 50%;
+        width: 40%;
     }
 
     #deckSelect{
@@ -205,12 +205,36 @@
     }
 
     #gotItButton{
-        grid-column: 1 / 1 span;
+        grid-column: 1 ;
+        width: 50%;
+    }
+
+    #flipCard{
+        grid-column: 2;
+        width: 50%;
     }
 
     #nextCard{
-        grid-column: 2;
-        grid-row: 2 ;
+        grid-column: 3;
+        width: 50%;
     }
 
+    #deckButton{
+        display: grid;
+        grid-template-columns:  .5fr .5fr .5fr;
+        margin-left: 18px;
+        width: 80%;
+    }
+
+    #toggleButton{
+        display: grid;
+        grid-template-columns:  1fr ;
+        
+    }
+
+    #reset{
+        width: 75%;
+        margin-right: 45px;
+        
+    }
 }
