@@ -37,7 +37,7 @@ Then I moved onto game logic, and  build a deck. One function / card at a time.
 
 ## MVP
 
-* Have flashcards avaialble to use
+* Have flashcards available to use
 * As a player, I want to be on a website that has a series of questions about a subject.
 * As a player, I would like to see the question and be able to control when I see the answer
 * As a player, I would like to click a button that logs when I know an answer, and have that card get removed from the deck
