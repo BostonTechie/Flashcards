@@ -29,37 +29,43 @@ class deck {
         gotItToggle = false
 
       if ( (i+1) === this.cards.length || i >= this.cards.length){  
-            $('#flashCard').text(this.cards[0].frontCard)
+            $('#target').removeClass('animate')
+            $('#flashCardFront').text(this.cards[0].frontCard)
             i = 0
 
             if (1 >=  this.cards.length ){
+                $('#target').removeClass('animate')
                 window.alert('Congrats you reached the end of the deck, restart if you want to start all over again!!')
 
                 //display final card upon reaching the end of the deck
-                $('#flashCard').text(this.cards[0].frontCard)
+                $('#flashCardFront').text(this.cards[0].frontCard)
               
             }
         }
         
         else {
              ++i
-            $('#flashCard').text(this.cards[i].frontCard)      
+             $('#target').removeClass('animate')
+            $('#flashCardFront').text(this.cards[i].frontCard)      
+            cardToggle = true
         } 
     }
 
     flipCard (){
         if (cardToggle === true){
-            $('#flashCard').text(this.cards[i].backCard)
-            $('#flashCard').css("background-color",'lightgreen')
+            $('#target').addClass('animate')
+            $('#flashCardBack').text(this.cards[i].backCard)
+            $('#flashCardBack').css("background-color",'lightgreen')
             cardToggle = false
 
             $('#front').text('Back of Card')
         }
         else if (cardToggle === false){
-            $('#flashCard').text(this.cards[i].frontCard)
+            $('#target').removeClass('animate')
+            $('#flashCardFront').text(this.cards[i].frontCard)
             cardToggle = true
             $('#front').text('Front of Card')
-            $('#flashCard').css("background-color",'rgb(167, 167, 167)')
+            $('#flashCardFront').css("background-color",'rgb(167, 167, 167)')
         }
     }
     
@@ -87,6 +93,7 @@ class deck {
 }
 
 const javaDeck = new deck ('javascript')
+
 
 
 javaDeck.addCard(card1)
@@ -136,7 +143,8 @@ $('#deckCount').text('Cards left to memorize: '+ javaDeck.cards.length)
 
 
 // set initial text to your first card
-$('#flashCard').text(javaDeck.cards[0].frontCard)
+$('#flashCardFront').text(javaDeck.cards[0].frontCard)
+$('#flashCardBack').text(javaDeck.cards[0].backCard)
 
 // call function when user wants to flip a card to the answer side
 $('#flipCard').on('click',()=> javaDeck.flipCard())
@@ -149,6 +157,8 @@ $('#flipCard').on('click',()=> javaDeck.flipCard())
     //37 left arrow 39 right arrow
      // call function when user wants to go to next card with keyboard
     $(document).on('keydown',(e)=> {
+        e.stopPropagation()
+        e.preventDefault()
     if(e.keyCode === 39) { javaDeck.nextCard()}
 })
 
