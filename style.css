@@ -1,9 +1,12 @@
 @media only screen and (min-width: 600px) {
     
+     /* future functionailty  */
     #deckSelect {
         display: none;
     }
     
+
+    /* future functionailty  */
     #addCard {
         display: none;
     }
