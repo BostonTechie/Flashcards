@@ -1,5 +1,5 @@
 ## INTRODUCTION
-  Hello my name is Andrew, this was project was built in as part of my General Assembly's Web development Immersive class.
+  Hello my name is Andrew, this was project was built  as part of my General Assembly's Web development Immersive class.
   I selected flash cards for development.
 
   linkedin: https://www.linkedin.com/in/andrew-urquhart/
