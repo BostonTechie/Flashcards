@@ -51,4 +51,6 @@ Then I moved onto game logic, and  build a deck. One function / card at a time.
 
     https://www.figma.com/file/49Xv75YUMLGs3hNh17Nf5O/flashcards?node-id=0%3A1
 
-  
+  ![image](https://user-images.githubusercontent.com/85643280/142709947-27c995a7-ebd9-4575-a057-728c9cb8096a.png)
+  ![image](https://user-images.githubusercontent.com/85643280/142709964-f4fff791-ccb8-4322-acba-c6d3ad51003c.png)
+
