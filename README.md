@@ -32,7 +32,7 @@ Then I moved onto game logic, and  build a deck. One function / card at a time.
 
 * clone the repository into a local file
 * open the index.html file and enjoy
-* or go to  https://stacklancer.github.io/Flashcards/
+* or go to  https://BostonTechie.github.io/Flashcards/
 
 
 ## MVP
